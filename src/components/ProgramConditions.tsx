@@ -97,7 +97,16 @@ const ProgramConditions = () => {
           </Card>
 
           {/* B2B клиенты */}
-          <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-purple-200">
+          <div className="relative">
+            {/* Бонусный бейдж над карточкой */}
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+              <Badge className="bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 px-4 py-1.5 text-sm font-bold shadow-lg">
+                <Icon name="Gift" size={14} className="mr-1.5" />
+                Бонус 50% за первое пополнение
+              </Badge>
+            </div>
+            
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-purple-200 pt-4">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
             <CardHeader className="pb-4">
               <div className="flex items-center justify-between">
@@ -142,14 +151,6 @@ const ProgramConditions = () => {
                 </div>
               </div>
 
-              {/* Бонус */}
-              <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-4 text-white">
-                <div className="flex items-center mb-2">
-                  <Icon name="Gift" size={20} className="mr-2" />
-                  <span className="font-bold">Бонус за первое пополнение</span>
-                </div>
-                <div className="text-2xl font-bold">50%</div>
-              </div>
 
               {/* Особенности */}
               <div className="space-y-3">

@@ -4,7 +4,10 @@ import { FlickeringGrid } from "@/components/ui/flickering-grid";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-20 overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center"
+    >
       <FlickeringGrid
         className="absolute inset-0 z-0"
         squareSize={3}

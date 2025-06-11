@@ -51,7 +51,35 @@ export function FeatureSteps({
         </h2>
 
         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10">
-          <div className="order-2 md:order-1 space-y-8">
+          <div className="order-1 md:order-1 relative h-[250px] md:h-[350px] lg:h-[450px] flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              {features.map(
+                (feature, index) =>
+                  index === currentFeature && (
+                    <motion.div
+                      key={index}
+                      className="absolute inset-0 flex items-center justify-center"
+                      initial={{ y: 100, opacity: 0, rotateX: -20 }}
+                      animate={{ y: 0, opacity: 1, rotateX: 0 }}
+                      exit={{ y: -100, opacity: 0, rotateX: 20 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                    >
+                      <div
+                        className={`w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-3xl ${feature.color} flex items-center justify-center shadow-2xl`}
+                      >
+                        <Icon
+                          name={feature.icon as any}
+                          size={80}
+                          className="md:w-24 md:h-24 lg:w-28 lg:h-28"
+                        />
+                      </div>
+                    </motion.div>
+                  ),
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="order-2 md:order-2 space-y-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -86,34 +114,6 @@ export function FeatureSteps({
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          <div className="order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              {features.map(
-                (feature, index) =>
-                  index === currentFeature && (
-                    <motion.div
-                      key={index}
-                      className="absolute inset-0 flex items-center justify-center"
-                      initial={{ y: 100, opacity: 0, rotateX: -20 }}
-                      animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                      exit={{ y: -100, opacity: 0, rotateX: 20 }}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
-                    >
-                      <div
-                        className={`w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-3xl ${feature.color} flex items-center justify-center shadow-2xl`}
-                      >
-                        <Icon
-                          name={feature.icon as any}
-                          size={64}
-                          className="md:w-20 md:h-20 lg:w-24 lg:h-24"
-                        />
-                      </div>
-                    </motion.div>
-                  ),
-              )}
-            </AnimatePresence>
           </div>
         </div>
       </div>

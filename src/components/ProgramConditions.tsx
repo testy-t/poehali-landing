@@ -95,9 +95,9 @@ const ProgramConditions = () => {
               {/* Пример дохода */}
               <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-6 text-white">
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
-                <div className="text-3xl font-bold mb-1">25 000 ₽ / мес</div>
+                <div className="text-3xl font-bold mb-1">250 000 ₽ / мес</div>
                 <div className="text-sm opacity-90">
-                  при 100 клиентах × 2500₽
+                  при 1000 клиентах × 2500₽
                 </div>
               </div>
             </CardContent>
@@ -177,9 +177,9 @@ const ProgramConditions = () => {
               {/* Пример дохода */}
               <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl p-6 text-white">
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
-                <div className="text-3xl font-bold mb-1">75 000 ₽ / мес</div>
+                <div className="text-3xl font-bold mb-1">150 000 ₽ / мес</div>
                 <div className="text-sm opacity-90">
-                  при 5 клиентах × 100 000₽
+                  при 10 клиентах × 100 000₽
                 </div>
               </div>
             </CardContent>

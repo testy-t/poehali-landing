@@ -113,8 +113,7 @@ export function FeatureSteps({
                     {feature.title || feature.step}
                   </h3>
                   <p className="text-sm md:text-lg text-muted-foreground">
-                    Делитесь ссылкой с ЦА — предпринимателями, маркетологами,
-                    дизайнерами и разработчиками
+                    {feature.content}
                   </p>
                 </div>
               </motion.div>

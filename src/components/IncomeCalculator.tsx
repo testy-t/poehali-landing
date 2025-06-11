@@ -30,7 +30,7 @@ const IncomeCalculator = () => {
   };
 
   return (
-    <section id="calculator" className="py-20 bg-white">
+    <section id="calculator" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -50,7 +50,7 @@ const IncomeCalculator = () => {
                   <Icon
                     name="Settings"
                     size={24}
-                    className="mr-2 text-purple-600"
+                    className="mr-2 text-orange-600"
                   />
                   Параметры расчета
                 </CardTitle>
@@ -93,11 +93,11 @@ const IncomeCalculator = () => {
                 </div>
 
                 {/* Информация об условиях */}
-                <div className="bg-purple-50 rounded-xl p-4">
-                  <h4 className="font-semibold text-purple-900 mb-2">
+                <div className="bg-yellow-50 rounded-xl p-4">
+                  <h4 className="font-semibold text-yellow-900 mb-2">
                     Условия расчета:
                   </h4>
-                  <div className="space-y-1 text-sm text-purple-700">
+                  <div className="space-y-1 text-sm text-yellow-700">
                     <div>• B2C: 10% от пополнений (средний чек 2 500₽)</div>
                     <div>• B2B: 15% от пополнений (средний чек 100 000₽)</div>
                     <div>• Бонус B2B: 50% от первого пополнения</div>
@@ -107,9 +107,9 @@ const IncomeCalculator = () => {
             </Card>
 
             {/* Результаты расчета */}
-            <Card className="bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-200">
+            <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-yellow-200">
               <CardHeader>
-                <CardTitle className="flex items-center text-purple-900">
+                <CardTitle className="flex items-center text-yellow-900">
                   <Icon name="Calculator" size={24} className="mr-2" />
                   Ваш доход
                 </CardTitle>
@@ -127,7 +127,7 @@ const IncomeCalculator = () => {
                         10%
                       </div>
                     </div>
-                    <div className="text-xl font-bold text-blue-600">
+                    <div className="text-xl font-bold text-orange-600">
                       {formatCurrency(b2cMonthlyIncome)}
                     </div>
                   </div>
@@ -142,7 +142,7 @@ const IncomeCalculator = () => {
                         15%
                       </div>
                     </div>
-                    <div className="text-xl font-bold text-purple-600">
+                    <div className="text-xl font-bold text-yellow-600">
                       {formatCurrency(b2bMonthlyIncome)}
                     </div>
                   </div>
@@ -166,22 +166,22 @@ const IncomeCalculator = () => {
                 </div>
 
                 {/* Итоговые суммы */}
-                <div className="border-t border-purple-200 pt-6">
+                <div className="border-t border-yellow-200 pt-6">
                   <div className="text-center space-y-4">
                     <div>
-                      <div className="text-sm text-purple-700 mb-1">
+                      <div className="text-sm text-yellow-700 mb-1">
                         Доход в месяц
                       </div>
-                      <div className="text-3xl font-bold text-purple-900">
+                      <div className="text-3xl font-bold text-yellow-900">
                         {formatCurrency(totalMonthlyIncome)}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-purple-700 mb-1">
+                      <div className="text-sm text-yellow-700 mb-1">
                         Доход в год
                       </div>
-                      <div className="text-2xl font-bold text-purple-900">
+                      <div className="text-2xl font-bold text-yellow-900">
                         {formatCurrency(totalYearlyIncome)}
                       </div>
                     </div>
@@ -206,7 +206,7 @@ const IncomeCalculator = () => {
                     месяц?
                   </p>
                   <button
-                    className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                    className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
                     onClick={() =>
                       document
                         .getElementById("final-cta")

@@ -189,7 +189,7 @@ function HeroGeometric({
               rel="noopener noreferrer"
               className="hover:text-yellow-300 transition-colors"
             >
-              poehali.dev
+              вместе с партнёрской программой poehali.dev
             </a>
           </div>
         </BlurFade>

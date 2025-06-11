@@ -205,15 +205,15 @@ function HeroGeometric({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-100 font-semibold px-8"
+              className="bg-yellow-400 text-black hover:bg-yellow-500 font-semibold px-8 rounded-lg text-center"
             >
-              Начать зарабатывать
+              Начать 👇🏼
               <Icon name="ArrowRight" className="ml-2" size={20} />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8"
+              className="border-white text-white hover:bg-white hover:text-black font-semibold px-8 bg-transparent"
             >
               Узнать больше
             </Button>

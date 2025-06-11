@@ -102,9 +102,7 @@ function HeroGeometric({
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-yellow-50 to-orange-100">
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-200/20 via-transparent to-yellow-200/20 blur-3xl" />
-
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 overflow-hidden">
         <ElegantShape
           delay={0.3}
@@ -200,14 +198,19 @@ function HeroGeometric({
             animate="visible"
           >
             <p className="text-base sm:text-lg md:text-xl text-gray-600/70 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Зарабатывайте стабильный доход с партнёрской программой
-              poehali.dev
+              Зарабатывайте стабильный доход с партнёрской программой{" "}
+              <a
+                href="https://poehali.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:text-orange-600 underline underline-offset-2"
+              >
+                poehali.dev
+              </a>
             </p>
           </motion.div>
         </div>
       </div>
-
-      <div className="absolute inset-0 bg-gradient-to-t from-yellow-50/80 via-transparent to-orange-100/80 pointer-events-none" />
     </div>
   );
 }

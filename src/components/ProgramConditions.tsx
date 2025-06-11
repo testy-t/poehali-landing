@@ -94,7 +94,7 @@ const ProgramConditions = () => {
               {/* Пример дохода */}
               <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-6 text-white">
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
-                <div className="text-3xl font-bold mb-1">25 000₽/мес</div>
+                <div className="text-3xl font-bold mb-1">25 000 ₽ / мес</div>
                 <div className="text-sm opacity-90">
                   при 100 клиентах × 2500₽
                 </div>
@@ -176,7 +176,7 @@ const ProgramConditions = () => {
               {/* Пример дохода */}
               <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl p-6 text-white">
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
-                <div className="text-3xl font-bold mb-1">75 000₽/мес</div>
+                <div className="text-3xl font-bold mb-1">75 000 ₽ / мес</div>
                 <div className="text-sm opacity-90">
                   при 5 клиентах × 100 000₽
                 </div>
@@ -193,7 +193,7 @@ const ProgramConditions = () => {
             Прогрессивная система вознаграждений
           </h3>
           <p className="text-gray-600">
-            Больше зарабатываете — выше процент вознаграждения
+            Больше зарабатываете — тем выше процент вознаграждения
           </p>
         </div>
 
@@ -204,7 +204,7 @@ const ProgramConditions = () => {
                 <Icon name="Star" size={24} className="text-gray-600" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Стартовый</h4>
-              <p className="text-sm text-gray-600 mb-3">до 50 000₽/мес</p>
+              <p className="text-sm text-gray-600 mb-3">до 50 000 ₽ / мес</p>
               <div className="text-lg font-semibold text-gray-900">
                 Базовая ставка
               </div>
@@ -218,10 +218,10 @@ const ProgramConditions = () => {
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Серебряный</h4>
               <p className="text-sm text-gray-600 mb-3">
-                50 000 - 200 000₽/мес
+                50 000 - 200 000 ₽ / мес
               </p>
               <div className="text-lg font-semibold text-green-600">
-                +5% к ставке
+                +3% к ставке
               </div>
             </CardContent>
           </Card>
@@ -232,9 +232,9 @@ const ProgramConditions = () => {
                 <Icon name="Crown" size={24} className="text-yellow-700" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">Золотой</h4>
-              <p className="text-sm text-gray-600 mb-3">от 200 000₽/мес</p>
+              <p className="text-sm text-gray-600 mb-3">от 200 000 ₽ / мес</p>
               <div className="text-lg font-semibold text-orange-600">
-                +10% к ставке
+                +5% к ставке
               </div>
             </CardContent>
           </Card>

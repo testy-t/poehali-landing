@@ -183,7 +183,7 @@ function HeroGeometric({
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
         <BlurFade delay={0.2}>
           <motion.div
-            className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-orange-100 text-orange-700 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8"
+            className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-green-100 text-green-700 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8"
             custom={0}
             variants={fadeUpVariants}
             initial="hidden"

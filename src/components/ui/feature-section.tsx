@@ -28,19 +28,23 @@ export function FeatureSteps({
 }: FeatureStepsProps) {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   useEffect(() => {
+    if (!isAutoPlay) return;
+
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
       setProgress(0);
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
-  }, [features.length, autoPlayInterval]);
+  }, [features.length, autoPlayInterval, isAutoPlay]);
 
   const handleStepClick = (index: number) => {
     setCurrentFeature(index);
     setProgress(0);
+    setIsAutoPlay(false);
   };
 
   return (

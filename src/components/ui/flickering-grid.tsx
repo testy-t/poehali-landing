@@ -137,7 +137,7 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     const animate = (time: number) => {
       if (!isInView) return;
 
-      const deltaTime = (time - lastTime) / 1000;
+      const deltaTime = Math.max((time - lastTime) / 1000, 0.016); // минимум 16ms
       lastTime = time;
 
       updateSquares(gridParams.squares, deltaTime);
@@ -161,23 +161,34 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
 
     const intersectionObserver = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
+        const newIsInView = entry.isIntersecting;
+        setIsInView(newIsInView);
+
+        if (newIsInView && !animationFrameId) {
+          lastTime = performance.now();
+          animationFrameId = requestAnimationFrame(animate);
+        }
       },
-      { threshold: 0 },
+      { threshold: 0.1 },
     );
 
     intersectionObserver.observe(canvas);
 
-    if (isInView) {
+    // Запускаем анимацию сразу для элементов в viewport
+    if (canvas.getBoundingClientRect().top < window.innerHeight) {
+      setIsInView(true);
+      lastTime = performance.now();
       animationFrameId = requestAnimationFrame(animate);
     }
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
       resizeObserver.disconnect();
       intersectionObserver.disconnect();
     };
-  }, [setupCanvas, updateSquares, drawGrid, width, height, isInView]);
+  }, [setupCanvas, updateSquares, drawGrid, width, height]);
 
   return (
     <div ref={containerRef} className={`w-full h-full ${className}`}>

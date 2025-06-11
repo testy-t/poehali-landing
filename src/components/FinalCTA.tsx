@@ -31,8 +31,8 @@ const FinalCTA = () => {
 
   return (
     <section
-      id="final-cta"
-      className="py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white relative overflow-hidden"
+      id="contact"
+      className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50"
     >
       {/* Декоративные элементы */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>

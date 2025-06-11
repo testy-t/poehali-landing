@@ -29,9 +29,14 @@ export function FeatureSteps({
   const [currentFeature, setCurrentFeature] = useState(0);
   const [progress, setProgress] = useState(0);
 
-  {
-    /* Убираем useEffect для автоплея */
-  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+      setProgress(0);
+    }, autoPlayInterval);
+
+    return () => clearInterval(interval);
+  }, [features.length, autoPlayInterval]);
 
   const handleStepClick = (index: number) => {
     setCurrentFeature(index);
@@ -40,7 +45,7 @@ export function FeatureSteps({
 
   return (
     <div className={cn("p-8 md:p-12", className)}>
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-center py-4">
           {title}
         </h2>

@@ -40,7 +40,7 @@ const FAQ = () => {
       id="faq"
       className="py-20 bg-gradient-to-b from-slate-50 to-white px-6"
     >
-      <div className="container mx-auto px-4 mb-6">
+      <div className="container mx-auto px-4 mb-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
             Часто задаваемые вопросы

@@ -190,7 +190,7 @@ function HeroGeometric({
             animate="visible"
           >
             <Circle className="w-1.5 md:w-2 h-1.5 md:h-2 mr-2 fill-current" />
-            {badge}
+            Пассивный доход
           </motion.div>
         </BlurFade>
 
@@ -209,8 +209,9 @@ function HeroGeometric({
               href="https://poehali.dev"
               className="text-yellow-custom hover:text-yellow-custom/80 underline"
             >
-              poehali.dev 🚀
-            </a>
+              poehali.dev
+            </a>{" "}
+            🚀
           </p>
         </BlurFade>
       </div>

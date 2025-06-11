@@ -1,60 +1,44 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const HeroSection = () => {
-  const words = [
-    { text: "Зарабатывайте" },
-    { text: "больше" },
-    { text: "вместе" },
-    { text: "с" },
-    {
-      text: "Poehali.dev",
-      className: "text-[#fbb040]",
-    },
-  ];
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center"
+      className="relative min-h-screen bg-gradient-to-br from-yellow-50 to-orange-100 flex items-center"
     >
-      <FlickeringGrid
-        className="absolute inset-0 z-0"
-        squareSize={3}
-        gridGap={7}
-        color="#9333ea"
-        maxOpacity={0.1}
-        flickerChance={0.05}
-      />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-            Партнёрская программа
-          </h1>
+          <BlurFade delay={0.25} inView>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+              Зарабатывайте больше 🚀
+            </h1>
+          </BlurFade>
 
-          <TypewriterEffectSmooth
-            words={words}
-            className="justify-center"
-            cursorClassName="bg-purple-600"
-          />
+          <BlurFade delay={0.5} inView>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+              вместе с poehali.dev
+            </p>
+          </BlurFade>
 
-          <div className="flex flex-col items-center space-y-8 mt-12">
-            <Button
-              size="lg"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold"
-            >
-              Начать
-              <Icon name="ArrowRight" size={20} className="ml-2" />
-            </Button>
+          <BlurFade delay={0.75} inView>
+            <div className="flex flex-col items-center space-y-8">
+              <Button
+                size="lg"
+                className="bg-[#fbb040] hover:bg-[#f4a832] text-white px-8 py-4 text-lg font-semibold shadow-lg transition-all duration-200 hover:shadow-xl"
+              >
+                Начать
+                <Icon name="ArrowRight" size={20} className="ml-2" />
+              </Button>
 
-            <Icon
-              name="ChevronDown"
-              size={32}
-              className="text-purple-600 animate-bounce"
-            />
-          </div>
+              <Icon
+                name="ChevronDown"
+                size={32}
+                className="text-[#fbb040] animate-bounce"
+              />
+            </div>
+          </BlurFade>
         </div>
       </div>
     </section>

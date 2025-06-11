@@ -98,13 +98,13 @@ const IncomeCalculator = () => {
                     value={averageCheck}
                     onValueChange={setAverageCheck}
                     min={500}
-                    max={50000}
+                    max={200000}
                     step={500}
                     className="mb-2"
                   />
                   <div className="flex justify-between text-sm text-gray-500">
                     <span>500₽</span>
-                    <span>50 000₽</span>
+                    <span>200 000₽</span>
                   </div>
                 </div>
 

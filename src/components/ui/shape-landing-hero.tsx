@@ -181,10 +181,21 @@ function HeroGeometric({
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-        <BlurFade delay={0.2}></BlurFade>
+        <BlurFade delay={0.2}>
+          <motion.div
+            className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-orange-100 text-orange-700 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8"
+            custom={0}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <Circle className="w-1.5 md:w-2 h-1.5 md:h-2 mr-2 fill-current" />
+            {badge}
+          </motion.div>
+        </BlurFade>
 
         <BlurFade delay={0.4}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-zinc-900 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               {title1}
             </span>
@@ -192,13 +203,13 @@ function HeroGeometric({
         </BlurFade>
 
         <BlurFade delay={0.6}>
-          <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600">
+          <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600">
             вместе с партнёрской программой{" "}
             <a
               href="https://poehali.dev"
               className="text-yellow-custom hover:text-yellow-custom/80 underline"
             >
-              poehali.dev
+              poehali.dev 🚀
             </a>
           </p>
         </BlurFade>

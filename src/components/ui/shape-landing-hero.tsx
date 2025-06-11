@@ -181,18 +181,7 @@ function HeroGeometric({
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-        <BlurFade delay={0.2}>
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium text-white mb-8">
-            <a
-              href="https://poehali.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-custom transition-colors"
-            >
-              вместе с партнёрской программой poehali.dev
-            </a>
-          </div>
-        </BlurFade>
+        <BlurFade delay={0.2}></BlurFade>
 
         <BlurFade delay={0.4}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">

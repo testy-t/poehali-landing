@@ -7,16 +7,19 @@ import Icon from "@/components/ui/icon";
 const IncomeCalculator = () => {
   const [b2cClients, setB2cClients] = useState([50]);
   const [b2bClients, setB2bClients] = useState([5]);
-  const [averageCheck, setAverageCheck] = useState([100000]);
+
+  // Фиксированные значения среднего чека
+  const b2cAverageCheck = 2500;
+  const b2bAverageCheck = 100000;
 
   // Расчет дохода
-  const b2cMonthlyIncome = b2cClients[0] * averageCheck[0] * 0.1;
-  const b2bMonthlyIncome = b2bClients[0] * averageCheck[0] * 0.15;
+  const b2cMonthlyIncome = b2cClients[0] * b2cAverageCheck * 0.1;
+  const b2bMonthlyIncome = b2bClients[0] * b2bAverageCheck * 0.15;
   const totalMonthlyIncome = b2cMonthlyIncome + b2bMonthlyIncome;
   const totalYearlyIncome = totalMonthlyIncome * 12;
 
   // Бонус за первое пополнение B2B
-  const b2bFirstTimeBonus = b2bClients[0] * averageCheck[0] * 0.5;
+  const b2bFirstTimeBonus = b2bClients[0] * b2bAverageCheck * 0.5;
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("ru-RU", {
@@ -89,33 +92,14 @@ const IncomeCalculator = () => {
                   </div>
                 </div>
 
-                {/* Средний чек */}
-                <div>
-                  <Label className="text-base font-semibold mb-4 block">
-                    Средний чек пополнения: {formatCurrency(averageCheck[0])}
-                  </Label>
-                  <Slider
-                    value={averageCheck}
-                    onValueChange={setAverageCheck}
-                    min={500}
-                    max={200000}
-                    step={500}
-                    className="mb-2"
-                  />
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>500₽</span>
-                    <span>200 000₽</span>
-                  </div>
-                </div>
-
                 {/* Информация об условиях */}
                 <div className="bg-purple-50 rounded-xl p-4">
                   <h4 className="font-semibold text-purple-900 mb-2">
                     Условия расчета:
                   </h4>
                   <div className="space-y-1 text-sm text-purple-700">
-                    <div>• B2C: 10% от пополнений в 1-й год, 5% во 2-й</div>
-                    <div>• B2B: 15% от пополнений в 1-й год, 10% во 2-й</div>
+                    <div>• B2C: 10% от пополнений (средний чек 2 500₽)</div>
+                    <div>• B2B: 15% от пополнений (средний чек 100 000₽)</div>
                     <div>• Бонус B2B: 50% от первого пополнения</div>
                   </div>
                 </div>
@@ -139,7 +123,7 @@ const IncomeCalculator = () => {
                         B2C клиенты
                       </div>
                       <div className="text-sm text-gray-600">
-                        {b2cClients[0]} × {formatCurrency(averageCheck[0])} ×
+                        {b2cClients[0]} × {formatCurrency(b2cAverageCheck)} ×
                         10%
                       </div>
                     </div>
@@ -154,7 +138,7 @@ const IncomeCalculator = () => {
                         B2B клиенты
                       </div>
                       <div className="text-sm text-gray-600">
-                        {b2bClients[0]} × {formatCurrency(averageCheck[0])} ×
+                        {b2bClients[0]} × {formatCurrency(b2bAverageCheck)} ×
                         15%
                       </div>
                     </div>
@@ -170,7 +154,7 @@ const IncomeCalculator = () => {
                           Бонус за первое пополнение
                         </div>
                         <div className="text-sm text-orange-700">
-                          {b2bClients[0]} × {formatCurrency(averageCheck[0])} ×
+                          {b2bClients[0]} × {formatCurrency(b2bAverageCheck)} ×
                           50%
                         </div>
                       </div>

@@ -36,7 +36,10 @@ const faqData = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section
+      id="faq"
+      className="py-20 bg-gradient-to-b from-slate-50 to-white px-6"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -53,9 +56,9 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl border border-slate-200 shadow-sm"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-slate-900 hover:text-violet-600">
+                <AccordionTrigger className="text-left text-lg font-semibold text-slate-900">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-slate-600 leading-relaxed pt-2">

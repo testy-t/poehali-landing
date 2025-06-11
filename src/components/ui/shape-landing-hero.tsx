@@ -3,6 +3,31 @@
 import { motion } from "framer-motion";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
+
+// Simple BlurFade component since it's not available
+function BlurFade({
+  children,
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      transition={{
+        duration: 0.8,
+        delay,
+        ease: [0.25, 0.4, 0.25, 1],
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 function ElegantShape({
   className,

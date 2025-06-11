@@ -105,97 +105,101 @@ const ProgramConditions = () => {
                 Бонус 50% за первое пополнение
               </Badge>
             </div>
-            
+
             <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-purple-200 pt-4">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
-            <CardHeader className="pb-4">
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-2xl font-bold text-gray-900">
-                  B2B клиенты
-                </CardTitle>
-                <Badge className="bg-purple-100 text-purple-800 border-purple-200">
-                  <Icon name="Crown" size={14} className="mr-1" />
-                  Премиум
-                </Badge>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {/* Условия по годам */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-purple-200 rounded-lg flex items-center justify-center mr-3">
-                      <span className="text-purple-800 font-bold text-sm">
-                        1
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-2xl font-bold text-gray-900">
+                    B2B клиенты
+                  </CardTitle>
+                  <Badge className="bg-purple-100 text-purple-800 border-purple-200">
+                    <Icon name="Crown" size={14} className="mr-1" />
+                    Премиум
+                  </Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {/* Условия по годам */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-purple-200 rounded-lg flex items-center justify-center mr-3">
+                        <span className="text-purple-800 font-bold text-sm">
+                          1
+                        </span>
+                      </div>
+                      <span className="font-semibold text-gray-900">
+                        1-й год
                       </span>
                     </div>
-                    <span className="font-semibold text-gray-900">1-й год</span>
+                    <span className="text-2xl font-bold text-purple-600">
+                      20%
+                    </span>
                   </div>
-                  <span className="text-2xl font-bold text-purple-600">
-                    20%
-                  </span>
-                </div>
 
-                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-purple-200 rounded-lg flex items-center justify-center mr-3">
-                      <span className="text-purple-800 font-bold text-sm">
-                        2
+                  <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-purple-200 rounded-lg flex items-center justify-center mr-3">
+                        <span className="text-purple-800 font-bold text-sm">
+                          2
+                        </span>
+                      </div>
+                      <span className="font-semibold text-gray-900">
+                        2-й год
                       </span>
                     </div>
-                    <span className="font-semibold text-gray-900">2-й год</span>
+                    <span className="text-2xl font-bold text-purple-600">
+                      10%
+                    </span>
                   </div>
-                  <span className="text-2xl font-bold text-purple-600">
-                    10%
-                  </span>
                 </div>
-              </div>
 
+                {/* Особенности */}
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <Icon
+                      name="Check"
+                      size={16}
+                      className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
+                    />
+                    <span className="text-gray-600">
+                      Персональная поддержка при онбординге
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon
+                      name="Check"
+                      size={16}
+                      className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
+                    />
+                    <span className="text-gray-600">
+                      Приоритетная техподдержка
+                    </span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon
+                      name="Check"
+                      size={16}
+                      className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
+                    />
+                    <span className="text-gray-600">
+                      Индивидуальные условия от 5 компаний
+                    </span>
+                  </div>
+                </div>
 
-              {/* Особенности */}
-              <div className="space-y-3">
-                <div className="flex items-start">
-                  <Icon
-                    name="Check"
-                    size={16}
-                    className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
-                  />
-                  <span className="text-gray-600">
-                    Персональная поддержка при онбординге
-                  </span>
+                {/* Пример дохода */}
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
+                  <div className="text-sm opacity-90 mb-1">Пример дохода:</div>
+                  <div className="text-xl font-bold">85 000₽/мес</div>
+                  <div className="text-sm opacity-90">
+                    при 5 компаний × 85000₽
+                  </div>
                 </div>
-                <div className="flex items-start">
-                  <Icon
-                    name="Check"
-                    size={16}
-                    className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
-                  />
-                  <span className="text-gray-600">
-                    Приоритетная техподдержка
-                  </span>
-                </div>
-                <div className="flex items-start">
-                  <Icon
-                    name="Check"
-                    size={16}
-                    className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
-                  />
-                  <span className="text-gray-600">
-                    Индивидуальные условия от 5 компаний
-                  </span>
-                </div>
-              </div>
-
-              {/* Пример дохода */}
-              <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
-                <div className="text-sm opacity-90 mb-1">Пример дохода:</div>
-                <div className="text-xl font-bold">85 000₽/мес</div>
-                <div className="text-sm opacity-90">
-                  при 5 компаний × 85000₽
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Прогрессивная система */}

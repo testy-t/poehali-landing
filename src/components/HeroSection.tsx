@@ -22,7 +22,7 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Зарабатывайте{" "}
             <TextRotate
-              texts={["больше", "лучше", "быстрее", "проще"]}
+              texts={["больше"]}
               mainClassName="text-black bg-[#fbb040] px-3 py-1 rounded-lg overflow-hidden inline-flex"
               staggerFrom="last"
               initial={{ y: "100%" }}
@@ -31,7 +31,7 @@ const HeroSection = () => {
               staggerDuration={0.03}
               splitLevelClassName="overflow-hidden"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2500}
+              auto={false}
             />
           </h1>
 

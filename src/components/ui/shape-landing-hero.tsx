@@ -183,7 +183,14 @@ function HeroGeometric({
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
         <BlurFade delay={0.2}>
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium text-white mb-8">
-            {badge}
+            <a
+              href="https://poehali.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-300 transition-colors"
+            >
+              {badge}
+            </a>
           </div>
         </BlurFade>
 
@@ -199,25 +206,6 @@ function HeroGeometric({
           <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600">
             {title2}
           </p>
-        </BlurFade>
-
-        <BlurFade delay={0.8}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-yellow-400 text-black hover:bg-yellow-500 font-semibold px-8 rounded-lg text-center"
-            >
-              Начать 👇🏼
-              <Icon name="ArrowRight" className="ml-2" size={20} />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-black font-semibold px-8 bg-transparent"
-            >
-              Узнать больше
-            </Button>
-          </div>
         </BlurFade>
       </div>
     </div>

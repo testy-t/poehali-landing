@@ -9,8 +9,11 @@ const HeroSection = () => {
       <HeroGeometric
         badge=""
         title1={
-          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-            Получайте больше
+          <span>
+            <span className="text-gray-900">Получайте </span>
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              больше
+            </span>
           </span>
         }
         title2="вместе с poehali.dev"

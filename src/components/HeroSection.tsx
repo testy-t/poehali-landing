@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section id="hero">
       <HeroGeometric
-        badge="Партнёрская программа"
+        badge=""
         title1={
           <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
             Зарабатывайте больше

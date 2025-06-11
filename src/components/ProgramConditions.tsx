@@ -96,23 +96,23 @@ const ProgramConditions = () => {
               {/* Пример дохода */}
               <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-6 text-white">
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
-                <div className="text-3xl font-bold mb-1">200 000₽/мес</div>
+                <div className="text-3xl font-bold mb-1">300 000₽/мес</div>
                 <div className="text-sm opacity-90">
-                  при 50 клиентах × 8000₽
+                  при 100 клиентах × 2000₽
                 </div>
               </div>
             </CardContent>
           </Card>
 
           {/* B2B клиенты */}
-          <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-orange-200">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-bl-full opacity-10"></div>
+          <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-blue-200">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-bl-full opacity-10"></div>
             <CardHeader className="pb-4">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-2xl font-bold text-gray-900">
                   B2B клиенты
                 </CardTitle>
-                <Badge className="bg-orange-100 text-orange-800 border-orange-200">
+                <Badge className="bg-blue-100 text-blue-800 border-blue-200">
                   Юрлица
                 </Badge>
               </div>
@@ -120,32 +120,24 @@ const ProgramConditions = () => {
             <CardContent className="space-y-6">
               {/* Условия по годам */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-orange-50 rounded-xl">
+                <div className="flex items-center justify-between p-4 bg-blue-50 rounded-xl">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 bg-orange-200 rounded-lg flex items-center justify-center mr-3">
-                      <span className="text-orange-800 font-bold text-sm">
-                        1
-                      </span>
+                    <div className="w-8 h-8 bg-blue-200 rounded-lg flex items-center justify-center mr-3">
+                      <span className="text-blue-800 font-bold text-sm">1</span>
                     </div>
                     <span className="font-semibold text-gray-900">1-й год</span>
                   </div>
-                  <span className="text-2xl font-bold text-orange-600">
-                    20%
-                  </span>
+                  <span className="text-2xl font-bold text-blue-600">20%</span>
                 </div>
 
-                <div className="flex items-center justify-between p-4 bg-orange-50 rounded-xl">
+                <div className="flex items-center justify-between p-4 bg-blue-50 rounded-xl">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 bg-orange-200 rounded-lg flex items-center justify-center mr-3">
-                      <span className="text-orange-800 font-bold text-sm">
-                        2
-                      </span>
+                    <div className="w-8 h-8 bg-blue-200 rounded-lg flex items-center justify-center mr-3">
+                      <span className="text-blue-800 font-bold text-sm">2</span>
                     </div>
                     <span className="font-semibold text-gray-900">2-й год</span>
                   </div>
-                  <span className="text-2xl font-bold text-orange-600">
-                    10%
-                  </span>
+                  <span className="text-2xl font-bold text-blue-600">10%</span>
                 </div>
               </div>
 
@@ -175,7 +167,7 @@ const ProgramConditions = () => {
                   <Icon
                     name="Heart"
                     size={16}
-                    className="mr-3 text-orange-500 mt-0.5 flex-shrink-0"
+                    className="mr-3 text-blue-500 mt-0.5 flex-shrink-0"
                   />
                   <span className="text-gray-600">
                     Бонус 50% за первое пополнение
@@ -184,7 +176,7 @@ const ProgramConditions = () => {
               </div>
 
               {/* Пример дохода */}
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl p-6 text-white">
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
                 <div className="text-3xl font-bold mb-1">200 000₽/мес</div>
                 <div className="text-sm opacity-90">

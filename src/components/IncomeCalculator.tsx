@@ -5,9 +5,9 @@ import { Label } from "@/components/ui/label";
 import Icon from "@/components/ui/icon";
 
 const IncomeCalculator = () => {
-  const [b2cClients, setB2cClients] = useState([25]);
+  const [b2cClients, setB2cClients] = useState([50]);
   const [b2bClients, setB2bClients] = useState([5]);
-  const [averageCheck, setAverageCheck] = useState([15000]);
+  const [averageCheck, setAverageCheck] = useState([100000]);
 
   // Расчет дохода
   const b2cMonthlyIncome = b2cClients[0] * averageCheck[0] * 0.15;

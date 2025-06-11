@@ -105,8 +105,7 @@ const ProgramConditions = () => {
                   B2B клиенты
                 </CardTitle>
                 <Badge className="bg-purple-100 text-purple-800 border-purple-200">
-                  <Icon name="Crown" size={14} className="mr-1" />
-                  Премиум
+                  Юрлица
                 </Badge>
               </div>
             </CardHeader>
@@ -145,25 +144,31 @@ const ProgramConditions = () => {
               {/* Особенности */}
               <div className="space-y-3">
                 <div className="flex items-start">
-                  <span className="text-orange-500 text-lg mr-3 mt-0.5">
-                    🧡
-                  </span>
+                  <Icon
+                    name="Heart"
+                    size={16}
+                    className="mr-3 text-orange-500 mt-0.5 flex-shrink-0"
+                  />
                   <span className="text-gray-600">
                     Персональная поддержка при онбординге
                   </span>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-orange-500 text-lg mr-3 mt-0.5">
-                    🧡
-                  </span>
+                  <Icon
+                    name="Heart"
+                    size={16}
+                    className="mr-3 text-orange-500 mt-0.5 flex-shrink-0"
+                  />
                   <span className="text-gray-600">
                     Приоритетная техподдержка
                   </span>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-orange-500 text-lg mr-3 mt-0.5">
-                    🧡
-                  </span>
+                  <Icon
+                    name="Heart"
+                    size={16}
+                    className="mr-3 text-orange-500 mt-0.5 flex-shrink-0"
+                  />
                   <span className="text-gray-600">
                     Бонус 50% за первое пополнение
                   </span>
@@ -174,9 +179,6 @@ const ProgramConditions = () => {
               <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
                 <div className="text-sm opacity-90 mb-1">Пример дохода:</div>
                 <div className="text-xl font-bold">85 000₽/мес</div>
-                <div className="text-sm opacity-90">
-                  при 5 компаний × 85000₽
-                </div>
               </div>
             </CardContent>
           </Card>

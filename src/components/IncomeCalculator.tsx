@@ -12,51 +12,14 @@ const IncomeCalculator = () => {
   const b2cAverageCheck = 2500;
   const b2bAverageCheck = 100000;
 
-  // Прогрессивная система комиссий B2C
-  const getB2cCommission = (clients: number) => {
-    if (clients >= 80) return 0.15; // 15% для топ-партнеров
-    if (clients >= 50) return 0.12; // 12% для активных
-    if (clients >= 20) return 0.1; // 10% базовая ставка
-    return 0.08; // 8% для новичков
-  };
-
-  // Прогрессивная система комиссий B2B
-  const getB2bCommission = (clients: number) => {
-    if (clients >= 15) return 0.25; // 25% для топ-партнеров
-    if (clients >= 10) return 0.2; // 20% для активных
-    if (clients >= 5) return 0.15; // 15% базовая ставка
-    return 0.12; // 12% для новичков
-  };
-
-  // Расчет дохода с прогрессивными ставками
-  const b2cCommissionRate = getB2cCommission(b2cClients[0]);
-  const b2bCommissionRate = getB2bCommission(b2bClients[0]);
-
-  const b2cMonthlyIncome = b2cClients[0] * b2cAverageCheck * b2cCommissionRate;
-  const b2bMonthlyIncome = b2bClients[0] * b2bAverageCheck * b2bCommissionRate;
+  // Расчет дохода
+  const b2cMonthlyIncome = b2cClients[0] * b2cAverageCheck * 0.1;
+  const b2bMonthlyIncome = b2bClients[0] * b2bAverageCheck * 0.15;
   const totalMonthlyIncome = b2cMonthlyIncome + b2bMonthlyIncome;
   const totalYearlyIncome = totalMonthlyIncome * 12;
 
-  // Бонус за первое пополнение B2B (остается 50%)
+  // Бонус за первое пополнение B2B
   const b2bFirstTimeBonus = b2bClients[0] * b2bAverageCheck * 0.5;
-
-  // Определение уровня партнера
-  const getPartnerLevel = (b2cCount: number, b2bCount: number) => {
-    const totalScore = b2cCount + b2bCount * 5; // B2B клиенты весят больше
-    if (totalScore >= 120)
-      return {
-        name: "Топ-партнер",
-        color: "text-yellow-600",
-        bg: "bg-yellow-50",
-      };
-    if (totalScore >= 75)
-      return { name: "Активный", color: "text-purple-600", bg: "bg-purple-50" };
-    if (totalScore >= 30)
-      return { name: "Опытный", color: "text-blue-600", bg: "bg-blue-50" };
-    return { name: "Новичок", color: "text-green-600", bg: "bg-green-50" };
-  };
-
-  const partnerLevel = getPartnerLevel(b2cClients[0], b2bClients[0]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("ru-RU", {
@@ -132,45 +95,12 @@ const IncomeCalculator = () => {
                 {/* Информация об условиях */}
                 <div className="bg-purple-50 rounded-xl p-4">
                   <h4 className="font-semibold text-purple-900 mb-2">
-                    Прогрессивная система вознаграждений:
+                    Условия расчета:
                   </h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="font-medium text-purple-800">
-                      B2C комиссии:
-                    </div>
-                    <div className="space-y-1 text-purple-700 ml-2">
-                      <div>• 0-19: 8% • 20-49: 10% • 50-79: 12% • 80+: 15%</div>
-                    </div>
-                    <div className="font-medium text-purple-800 mt-2">
-                      B2B комиссии:
-                    </div>
-                    <div className="space-y-1 text-purple-700 ml-2">
-                      <div>• 0-4: 12% • 5-9: 15% • 10-14: 20% • 15+: 25%</div>
-                    </div>
-                    <div className="text-purple-600 font-medium mt-2">
-                      + Бонус B2B: 50% от первого пополнения
-                    </div>
-                  </div>
-                </div>
-
-                {/* Уровень партнера */}
-                <div
-                  className={`${partnerLevel.bg} rounded-xl p-4 border border-current border-opacity-20`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-sm text-gray-600">Ваш уровень</div>
-                      <div
-                        className={`font-bold text-lg ${partnerLevel.color}`}
-                      >
-                        {partnerLevel.name}
-                      </div>
-                    </div>
-                    <Icon
-                      name="Award"
-                      size={32}
-                      className={partnerLevel.color}
-                    />
+                  <div className="space-y-1 text-sm text-purple-700">
+                    <div>• B2C: 10% от пополнений (средний чек 2 500₽)</div>
+                    <div>• B2B: 15% от пополнений (средний чек 100 000₽)</div>
+                    <div>• Бонус B2B: 50% от первого пополнения</div>
                   </div>
                 </div>
               </CardContent>
@@ -193,8 +123,8 @@ const IncomeCalculator = () => {
                         B2C клиенты
                       </div>
                       <div className="text-sm text-gray-600">
-                        {b2cClients[0]} × {formatCurrency(b2cAverageCheck)} ×{" "}
-                        {(b2cCommissionRate * 100).toFixed(0)}%
+                        {b2cClients[0]} × {formatCurrency(b2cAverageCheck)} ×
+                        10%
                       </div>
                     </div>
                     <div className="text-xl font-bold text-blue-600">
@@ -208,8 +138,8 @@ const IncomeCalculator = () => {
                         B2B клиенты
                       </div>
                       <div className="text-sm text-gray-600">
-                        {b2bClients[0]} × {formatCurrency(b2bAverageCheck)} ×{" "}
-                        {(b2bCommissionRate * 100).toFixed(0)}%
+                        {b2bClients[0]} × {formatCurrency(b2bAverageCheck)} ×
+                        15%
                       </div>
                     </div>
                     <div className="text-xl font-bold text-purple-600">

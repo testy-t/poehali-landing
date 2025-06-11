@@ -12,7 +12,7 @@ const ProgramConditions = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-xl mx-auto">
             Приводите клиентов и получайте вознаграждение, пропорционально
-            размеру пополнений{" "}
+            размеру чека
           </p>
         </div>
 

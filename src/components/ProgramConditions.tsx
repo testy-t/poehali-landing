@@ -145,9 +145,9 @@ const ProgramConditions = () => {
               <div className="space-y-3">
                 <div className="flex items-start">
                   <Icon
-                    name="Heart"
+                    name="Check"
                     size={16}
-                    className="mr-3 text-orange-500 mt-0.5 flex-shrink-0"
+                    className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
                   />
                   <span className="text-gray-600">
                     Персональная поддержка при онбординге
@@ -155,9 +155,9 @@ const ProgramConditions = () => {
                 </div>
                 <div className="flex items-start">
                   <Icon
-                    name="Heart"
+                    name="Check"
                     size={16}
-                    className="mr-3 text-orange-500 mt-0.5 flex-shrink-0"
+                    className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
                   />
                   <span className="text-gray-600">
                     Приоритетная техподдержка
@@ -179,6 +179,9 @@ const ProgramConditions = () => {
               <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
                 <div className="text-sm opacity-90 mb-1">Пример дохода:</div>
                 <div className="text-xl font-bold">85 000₽/мес</div>
+                <div className="text-sm opacity-90">
+                  при 5 клиентах × 85 000₽
+                </div>
               </div>
             </CardContent>
           </Card>

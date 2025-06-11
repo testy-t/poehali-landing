@@ -195,7 +195,7 @@ function HeroGeometric({
         </BlurFade>
 
         <BlurFade delay={0.4}>
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-zinc-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 text-zinc-900 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               {title1}
             </span>

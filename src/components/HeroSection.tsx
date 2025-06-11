@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { TextRotate } from "@/components/ui/text-rotate";
-import { useState, useEffect } from "react";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const HeroSection = () => {
-  const [showAnimation, setShowAnimation] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowAnimation(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const words = [
+    { text: "Зарабатывайте" },
+    { text: "больше" },
+    { text: "вместе" },
+    { text: "с" },
+    {
+      text: "Poehali.dev",
+      className: "text-[#fbb040]",
+    },
+  ];
 
   return (
     <section
@@ -30,42 +30,31 @@ const HeroSection = () => {
       />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Зарабатывайте{" "}
-            {showAnimation && (
-              <TextRotate
-                texts={["больше"]}
-                mainClassName="text-black bg-[#fbb040] px-3 py-1 rounded-lg overflow-hidden inline-flex"
-                staggerFrom="last"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-120%" }}
-                staggerDuration={0.03}
-                splitLevelClassName="overflow-hidden"
-                transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                auto={false}
-              />
-            )}
+          <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+            Партнёрская программа
           </h1>
 
-          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            вместе с{" "}
-            <a
-              href="https://poehali.dev"
-              className="font-semibold hover:underline transition-colors"
-              style={{ color: "#fbb040" }}
-            >
-              poehali.dev
-            </a>
-          </p>
+          <TypewriterEffectSmooth
+            words={words}
+            className="justify-center"
+            cursorClassName="bg-purple-600"
+          />
 
-          <Button
-            size="lg"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold"
-          >
-            Начать зарабатывать
-            <Icon name="ArrowRight" size={20} className="ml-2" />
-          </Button>
+          <div className="flex flex-col items-center space-y-8 mt-12">
+            <Button
+              size="lg"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold"
+            >
+              Начать
+              <Icon name="ArrowRight" size={20} className="ml-2" />
+            </Button>
+
+            <Icon
+              name="ChevronDown"
+              size={32}
+              className="text-purple-600 animate-bounce"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -96,7 +96,7 @@ const ProgramConditions = () => {
                 <div className="text-sm opacity-90 mb-2">Пример дохода:</div>
                 <div className="text-3xl font-bold mb-1">25 000₽/мес</div>
                 <div className="text-sm opacity-90">
-                  при 50 клиентах × 5000₽
+                  при 100 клиентах × 2500₽
                 </div>
               </div>
             </CardContent>

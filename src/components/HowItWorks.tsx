@@ -35,24 +35,7 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <FeatureSteps
-          features={features}
-          title="Как это работает"
-          autoPlayInterval={4000}
-        />
-
-        {/* Дополнительная информация */}
-        <div className="mt-16 text-center">
-          <div className="bg-purple-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Начните зарабатывать прямо сейчас
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Среднее время от регистрации до первого дохода составляет всего 7
-              дней
-            </p>
-          </div>
-        </div>
+        <FeatureSteps features={features} title="Как это работает" />
       </div>
     </section>
   );

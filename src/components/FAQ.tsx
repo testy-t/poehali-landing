@@ -26,11 +26,7 @@ const faqData = [
     answer:
       "Да, вы можете продвигать Poehali.dev любыми доступными способами: в социальных сетях, блогах, YouTube, подкастах, email-рассылках. Мы предоставляем готовые баннеры, видео-материалы и тексты для рекламы. Запрещена только контекстная реклама по брендовым запросам.",
   },
-  {
-    question: "Какие маркетинговые материалы вы предоставляете?",
-    answer:
-      "В партнерском кабинете доступны: баннеры различных размеров, видео-презентации, описания сервиса для постов, email-шаблоны, логотипы в разных форматах, скриншоты интерфейса. Материалы регулярно обновляются, добавляются сезонные акции и спецпредложения.",
-  },
+
   {
     question: "Есть ли ограничения на количество привлеченных клиентов?",
     answer:
@@ -40,13 +36,13 @@ const faqData = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">
             Часто задаваемые вопросы
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Ответы на самые популярные вопросы о партнерской программе
           </p>
         </div>
@@ -57,43 +53,17 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-white rounded-xl border border-gray-200 px-6"
+                className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-purple-600">
+                <AccordionTrigger className="text-left text-lg font-semibold text-slate-900 hover:text-violet-600">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 leading-relaxed pt-2">
+                <AccordionContent className="text-slate-600 leading-relaxed pt-2">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-
-          {/* Дополнительная помощь */}
-          <div className="mt-12 text-center">
-            <div className="bg-white rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Не нашли ответ на свой вопрос?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Наша команда поддержки готова помочь вам 24/7
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:partners@poehali.dev"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                >
-                  Написать в поддержку
-                </a>
-                <a
-                  href="https://t.me/+QgiLIa1gFRY4Y2Iy"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  Telegram сообщество
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

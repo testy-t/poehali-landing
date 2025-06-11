@@ -97,16 +97,7 @@ const ProgramConditions = () => {
           </Card>
 
           {/* B2B клиенты */}
-          <div className="relative">
-            {/* Бонусный бейдж над карточкой */}
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-              <Badge className="bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 px-4 py-1.5 text-sm font-bold shadow-lg">
-                <Icon name="Gift" size={14} className="mr-1.5" />
-                Бонус 50% за первое пополнение
-              </Badge>
-            </div>
-
-            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-purple-200 pt-4">
+          <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-purple-200">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-bl-full opacity-10"></div>
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
@@ -158,33 +149,21 @@ const ProgramConditions = () => {
                 {/* Особенности */}
                 <div className="space-y-3">
                   <div className="flex items-start">
-                    <Icon
-                      name="Check"
-                      size={16}
-                      className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
-                    />
+                    <span className="text-orange-500 text-lg mr-3 mt-0.5">🧡</span>
                     <span className="text-gray-600">
                       Персональная поддержка при онбординге
                     </span>
                   </div>
                   <div className="flex items-start">
-                    <Icon
-                      name="Check"
-                      size={16}
-                      className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
-                    />
+                    <span className="text-orange-500 text-lg mr-3 mt-0.5">🧡</span>
                     <span className="text-gray-600">
                       Приоритетная техподдержка
                     </span>
                   </div>
                   <div className="flex items-start">
-                    <Icon
-                      name="Check"
-                      size={16}
-                      className="mr-3 text-green-600 mt-0.5 flex-shrink-0"
-                    />
+                    <span className="text-orange-500 text-lg mr-3 mt-0.5">🧡</span>
                     <span className="text-gray-600">
-                      Индивидуальные условия от 5 компаний
+                      Бонус 50% за первое пополнение
                     </span>
                   </div>
                 </div>

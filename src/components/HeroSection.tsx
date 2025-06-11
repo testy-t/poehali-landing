@@ -2,11 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { FlickeringGrid } from "@/components/ui/flickering-grid";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-20">
-      <div className="container mx-auto px-4">
+    <section className="relative bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-20 overflow-hidden">
+      <FlickeringGrid
+        className="absolute inset-0 z-0"
+        squareSize={3}
+        gridGap={7}
+        color="#9333ea"
+        maxOpacity={0.1}
+        flickerChance={0.05}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <BlurFade delay={0.25} inView>
             <Badge className="mb-6 bg-purple-100 text-purple-800 border-purple-200">

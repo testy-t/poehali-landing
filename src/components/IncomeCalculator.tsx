@@ -10,8 +10,8 @@ const IncomeCalculator = () => {
   const [averageCheck, setAverageCheck] = useState([100000]);
 
   // Расчет дохода
-  const b2cMonthlyIncome = b2cClients[0] * averageCheck[0] * 0.15;
-  const b2bMonthlyIncome = b2bClients[0] * averageCheck[0] * 0.2;
+  const b2cMonthlyIncome = b2cClients[0] * averageCheck[0] * 0.1;
+  const b2bMonthlyIncome = b2bClients[0] * averageCheck[0] * 0.15;
   const totalMonthlyIncome = b2cMonthlyIncome + b2bMonthlyIncome;
   const totalYearlyIncome = totalMonthlyIncome * 12;
 
@@ -114,8 +114,8 @@ const IncomeCalculator = () => {
                     Условия расчета:
                   </h4>
                   <div className="space-y-1 text-sm text-purple-700">
-                    <div>• B2C: 15% от пополнений в 1-й год</div>
-                    <div>• B2B: 20% от пополнений в 1-й год</div>
+                    <div>• B2C: 10% от пополнений в 1-й год, 5% во 2-й</div>
+                    <div>• B2B: 15% от пополнений в 1-й год, 10% во 2-й</div>
                     <div>• Бонус B2B: 50% от первого пополнения</div>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const IncomeCalculator = () => {
                       </div>
                       <div className="text-sm text-gray-600">
                         {b2cClients[0]} × {formatCurrency(averageCheck[0])} ×
-                        15%
+                        10%
                       </div>
                     </div>
                     <div className="text-xl font-bold text-blue-600">
@@ -155,7 +155,7 @@ const IncomeCalculator = () => {
                       </div>
                       <div className="text-sm text-gray-600">
                         {b2bClients[0]} × {formatCurrency(averageCheck[0])} ×
-                        20%
+                        15%
                       </div>
                     </div>
                     <div className="text-xl font-bold text-purple-600">

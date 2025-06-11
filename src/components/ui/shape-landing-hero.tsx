@@ -196,7 +196,7 @@ function HeroGeometric({
         </BlurFade>
 
         <BlurFade delay={0.6}>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600">
             {title2}
           </p>
         </BlurFade>

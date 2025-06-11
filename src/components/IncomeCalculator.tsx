@@ -50,7 +50,7 @@ const IncomeCalculator = () => {
                   <Icon
                     name="Settings"
                     size={24}
-                    className="mr-2 text-orange-600"
+                    className="mr-2 text-blue-600"
                   />
                   Параметры расчета
                 </CardTitle>
@@ -93,11 +93,11 @@ const IncomeCalculator = () => {
                 </div>
 
                 {/* Информация об условиях */}
-                <div className="bg-yellow-50 rounded-xl p-4">
-                  <h4 className="font-semibold text-yellow-900 mb-2">
+                <div className="bg-blue-50 rounded-xl p-4">
+                  <h4 className="font-semibold text-blue-900 mb-2">
                     Условия расчета:
                   </h4>
-                  <div className="space-y-1 text-sm text-yellow-700">
+                  <div className="space-y-1 text-sm text-blue-700">
                     <div>• B2C: 10% от пополнений (средний чек 2 500₽)</div>
                     <div>• B2B: 15% от пополнений (средний чек 100 000₽)</div>
                     <div>• Бонус B2B: 50% от первого пополнения</div>
@@ -107,9 +107,9 @@ const IncomeCalculator = () => {
             </Card>
 
             {/* Результаты расчета */}
-            <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-yellow-200">
+            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
               <CardHeader>
-                <CardTitle className="flex items-center text-yellow-900">
+                <CardTitle className="flex items-center text-blue-900">
                   <Icon name="Calculator" size={24} className="mr-2" />
                   Ваш доход
                 </CardTitle>
@@ -127,7 +127,7 @@ const IncomeCalculator = () => {
                         10%
                       </div>
                     </div>
-                    <div className="text-xl font-bold text-orange-600">
+                    <div className="text-xl font-bold text-blue-600">
                       {formatCurrency(b2cMonthlyIncome)}
                     </div>
                   </div>
@@ -142,23 +142,23 @@ const IncomeCalculator = () => {
                         15%
                       </div>
                     </div>
-                    <div className="text-xl font-bold text-yellow-600">
+                    <div className="text-xl font-bold text-indigo-600">
                       {formatCurrency(b2bMonthlyIncome)}
                     </div>
                   </div>
 
                   {b2bClients[0] > 0 && (
-                    <div className="flex items-center justify-between p-4 bg-orange-100 rounded-xl border border-orange-200">
+                    <div className="flex items-center justify-between p-4 bg-blue-100 rounded-xl border border-blue-200">
                       <div>
-                        <div className="font-semibold text-orange-900">
+                        <div className="font-semibold text-blue-900">
                           Бонус за первое пополнение
                         </div>
-                        <div className="text-sm text-orange-700">
+                        <div className="text-sm text-blue-700">
                           {b2bClients[0]} × {formatCurrency(b2bAverageCheck)} ×
                           50%
                         </div>
                       </div>
-                      <div className="text-xl font-bold text-orange-600">
+                      <div className="text-xl font-bold text-blue-600">
                         {formatCurrency(b2bFirstTimeBonus)}
                       </div>
                     </div>
@@ -166,32 +166,32 @@ const IncomeCalculator = () => {
                 </div>
 
                 {/* Итоговые суммы */}
-                <div className="border-t border-yellow-200 pt-6">
+                <div className="border-t border-blue-200 pt-6">
                   <div className="text-center space-y-4">
                     <div>
-                      <div className="text-sm text-yellow-700 mb-1">
+                      <div className="text-sm text-blue-700 mb-1">
                         Доход в месяц
                       </div>
-                      <div className="text-3xl font-bold text-yellow-900">
+                      <div className="text-3xl font-bold text-blue-900">
                         {formatCurrency(totalMonthlyIncome)}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-yellow-700 mb-1">
+                      <div className="text-sm text-blue-700 mb-1">
                         Доход в год
                       </div>
-                      <div className="text-2xl font-bold text-yellow-900">
+                      <div className="text-2xl font-bold text-blue-900">
                         {formatCurrency(totalYearlyIncome)}
                       </div>
                     </div>
 
                     {b2bClients[0] > 0 && (
-                      <div className="bg-orange-100 rounded-xl p-4 border border-orange-200">
-                        <div className="text-sm text-orange-700 mb-1">
+                      <div className="bg-blue-100 rounded-xl p-4 border border-blue-200">
+                        <div className="text-sm text-blue-700 mb-1">
                           + Разовый бонус
                         </div>
-                        <div className="text-xl font-bold text-orange-600">
+                        <div className="text-xl font-bold text-blue-600">
                           {formatCurrency(b2bFirstTimeBonus)}
                         </div>
                       </div>
@@ -206,7 +206,7 @@ const IncomeCalculator = () => {
                     месяц?
                   </p>
                   <button
-                    className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
+                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                     onClick={() =>
                       document
                         .getElementById("final-cta")

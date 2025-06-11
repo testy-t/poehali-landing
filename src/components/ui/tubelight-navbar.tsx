@@ -60,8 +60,8 @@ export function NavBar({ items, className }: NavBarProps) {
               onClick={() => handleNavClick(item)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
-                "text-gray-700 hover:text-purple-600",
-                isActive && "bg-white/20 text-purple-600",
+                "text-gray-700 hover:text-yellow-400",
+                isActive && "bg-white/20 text-yellow-400",
               )}
             >
               <span className="hidden md:inline">{item.name}</span>
@@ -71,7 +71,7 @@ export function NavBar({ items, className }: NavBarProps) {
               {isActive && (
                 <motion.div
                   layoutId="lamp"
-                  className="absolute inset-0 w-full bg-purple-500/5 rounded-full -z-10"
+                  className="absolute inset-0 w-full bg-yellow-500/5 rounded-full -z-10"
                   initial={false}
                   transition={{
                     type: "spring",
@@ -79,10 +79,10 @@ export function NavBar({ items, className }: NavBarProps) {
                     damping: 30,
                   }}
                 >
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-purple-500 rounded-t-full">
-                    <div className="absolute w-12 h-6 bg-purple-500/20 rounded-full blur-md -top-2 -left-2" />
-                    <div className="absolute w-8 h-6 bg-purple-500/20 rounded-full blur-md -top-1" />
-                    <div className="absolute w-4 h-4 bg-purple-500/20 rounded-full blur-sm top-0 left-2" />
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-yellow-500 rounded-t-full">
+                    <div className="absolute w-12 h-6 bg-yellow-500/20 rounded-full blur-md -top-2 -left-2" />
+                    <div className="absolute w-8 h-6 bg-yellow-500/20 rounded-full blur-md -top-1" />
+                    <div className="absolute w-4 h-4 bg-yellow-500/20 rounded-full blur-sm top-0 left-2" />
                   </div>
                 </motion.div>
               )}

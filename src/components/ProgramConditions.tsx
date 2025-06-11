@@ -10,8 +10,9 @@ const ProgramConditions = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Условия программы
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Выгодные условия для разных типов клиентов с долгосрочными выплатами
+          <p className="text-xl text-gray-600 max-w-xl mx-auto">
+            Приводите клиентов и получайте вознаграждение, пропорционально
+            размеру пополнений{" "}
           </p>
         </div>
 

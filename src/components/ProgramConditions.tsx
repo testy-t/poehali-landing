@@ -41,7 +41,9 @@ const ProgramConditions = () => {
                     </div>
                     <span className="font-semibold text-gray-900">1-й год</span>
                   </div>
-                  <span className="text-2xl font-bold text-yellow-600">5%</span>
+                  <span className="text-2xl font-bold text-yellow-600">
+                    10%
+                  </span>
                 </div>
 
                 <div className="flex items-center justify-between p-4 bg-yellow-50 rounded-xl">

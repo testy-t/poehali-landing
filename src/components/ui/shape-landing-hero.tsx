@@ -203,7 +203,7 @@ function HeroGeometric({
         </BlurFade>
 
         <BlurFade delay={0.6}>
-          <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600">
+          <p className="md:text-xl lg:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600 ">
             вместе с партнёрской программой{" "}
             <a
               href="https://poehali.dev"

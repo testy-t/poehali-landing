@@ -108,10 +108,14 @@ function HeroGeometric({
   badge = "Design Collective",
   title1 = "Elevate Your Digital Vision",
   title2 = "Crafting Exceptional Websites",
+  buttonText = "Get Started",
+  buttonClassName = "",
 }: {
   badge?: string;
   title1?: string;
   title2?: string;
+  buttonText?: string;
+  buttonClassName?: string;
 }) {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -127,91 +131,26 @@ function HeroGeometric({
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Background geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <ElegantShape
-          delay={0.3}
-          width={600}
-          height={140}
-          rotate={12}
-          gradient="from-orange-300/30"
-          amount="50 000 ₽"
-          className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
-        />
-
-        <ElegantShape
-          delay={0.5}
-          width={500}
-          height={120}
-          rotate={-15}
-          gradient="from-yellow-300/30"
-          amount="100 000 ₽"
-          className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
-        />
-
-        <ElegantShape
-          delay={0.4}
-          width={300}
-          height={80}
-          rotate={-8}
-          gradient="from-amber-300/30"
-          amount="25 000 ₽"
-          className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
-        />
-
-        <ElegantShape
-          delay={0.6}
-          width={200}
-          height={60}
-          rotate={20}
-          gradient="from-orange-400/30"
-          amount="10 000 ₽"
-          className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
-        />
-
-        <ElegantShape
-          delay={0.7}
-          width={150}
-          height={40}
-          rotate={-25}
-          gradient="from-yellow-400/30"
-          amount="75 000 ₽"
-          className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
-        />
+        <div className="absolute top-10 left-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-32 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute bottom-20 left-32 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-        <BlurFade delay={0.2}>
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium text-white mb-8">
-            <a
-              href="https://poehali.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-custom transition-colors"
-            >
-              вместе с партнёрской программой poehali.dev
-            </a>
-          </div>
-        </BlurFade>
-
-        <BlurFade delay={0.4}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              {title1}
-            </span>
+      {/* Main content */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <BlurFade delay={0.25} inView>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            {title1} <span className="text-white">{title2}</span>
           </h1>
         </BlurFade>
 
-        <BlurFade delay={0.6}>
-          <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600">
-            вместе с партнёрской программой{" "}
-            <a
-              href="https://poehali.dev"
-              className="text-yellow-custom hover:text-yellow-custom/80 underline"
-            >
-              poehali.dev
-            </a>
-          </p>
+        <BlurFade delay={0.5} inView>
+          <Button size="lg" className={buttonClassName}>
+            {buttonText}
+          </Button>
         </BlurFade>
       </div>
     </div>

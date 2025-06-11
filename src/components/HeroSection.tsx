@@ -2,8 +2,19 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { TextRotate } from "@/components/ui/text-rotate";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowAnimation(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -21,18 +32,20 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Зарабатывайте{" "}
-            <TextRotate
-              texts={["больше"]}
-              mainClassName="text-black bg-[#fbb040] px-3 py-1 rounded-lg overflow-hidden inline-flex"
-              staggerFrom="last"
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.03}
-              splitLevelClassName="overflow-hidden"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              auto={false}
-            />
+            {showAnimation && (
+              <TextRotate
+                texts={["больше"]}
+                mainClassName="text-black bg-[#fbb040] px-3 py-1 rounded-lg overflow-hidden inline-flex"
+                staggerFrom="last"
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.03}
+                splitLevelClassName="overflow-hidden"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                auto={false}
+              />
+            )}
           </h1>
 
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">

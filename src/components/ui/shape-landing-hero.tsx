@@ -187,7 +187,7 @@ function HeroGeometric({
               href="https://poehali.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-300 transition-colors"
+              className="hover:text-yellow-400 transition-colors"
             >
               вместе с партнёрской программой poehali.dev
             </a>
@@ -207,7 +207,7 @@ function HeroGeometric({
             вместе с партнёрской программой{" "}
             <a
               href="https://poehali.dev"
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-yellow-400 hover:text-yellow-300 underline"
             >
               poehali.dev
             </a>

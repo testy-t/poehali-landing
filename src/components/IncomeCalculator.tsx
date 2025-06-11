@@ -64,13 +64,13 @@ const IncomeCalculator = () => {
                   <Slider
                     value={b2cClients}
                     onValueChange={setB2cClients}
-                    max={100}
+                    max={1000}
                     step={1}
                     className="mb-2"
                   />
                   <div className="flex justify-between text-sm text-gray-500">
                     <span>0</span>
-                    <span>100</span>
+                    <span>1000</span>
                   </div>
                 </div>
 

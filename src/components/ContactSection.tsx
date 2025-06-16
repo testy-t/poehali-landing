@@ -2,27 +2,62 @@ import { StarBorder } from "@/components/ui/star-border";
 
 const ContactSection = () => {
   return (
-    <div className="text-center space-y-6">
-      <div className="text-zinc-600">
-        <p>Хотите стать партнёром? Присоединяйтесь к нашей программе!</p>
-      </div>
-      <div className="flex justify-center">
+    <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/30">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-6">Есть вопросы?</h2>
+        <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Свяжитесь с нами в Telegram и получите персональную консультацию по
+          партнерской программе
+        </p>
+
         <StarBorder
           as="a"
-          href="https://t.me/m/hEQRio2kNmFi"
+          href="https://t.me/your_telegram_bot"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block transition-transform hover:scale-105"
-          color="#ffffff"
+          color="#0088cc"
           speed="8s"
         >
-          <div className="flex items-center gap-3 bg-zinc-900 text-white px-6 py-3 rounded-[20px] border-0">
-            <i className="bi bi-telegram text-xl"></i>
-            <span className="font-semibold">Начать работу</span>
+          <div className="flex items-center gap-3">
+            <i className="bi bi-telegram text-2xl text-blue-500"></i>
+            <span className="font-semibold">Написать в Telegram</span>
           </div>
         </StarBorder>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="p-6">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i className="bi bi-clock text-primary text-xl"></i>
+            </div>
+            <h3 className="font-semibold mb-2">Быстрый ответ</h3>
+            <p className="text-sm text-muted-foreground">
+              Отвечаем в течение часа в рабочее время
+            </p>
+          </div>
+
+          <div className="p-6">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i className="bi bi-person-check text-primary text-xl"></i>
+            </div>
+            <h3 className="font-semibold mb-2">Персональная помощь</h3>
+            <p className="text-sm text-muted-foreground">
+              Индивидуальный подход к каждому партнеру
+            </p>
+          </div>
+
+          <div className="p-6">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i className="bi bi-shield-check text-primary text-xl"></i>
+            </div>
+            <h3 className="font-semibold mb-2">Надежная поддержка</h3>
+            <p className="text-sm text-muted-foreground">
+              Полное сопровождение на всех этапах
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

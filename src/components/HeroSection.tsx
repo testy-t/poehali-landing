@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
-import ContactSection from "@/components/ContactSection";
 
 const HeroSection = () => {
   return (
@@ -20,11 +19,7 @@ const HeroSection = () => {
         title2="вместе с poehali.dev"
         buttonText="Начать 👇🏼"
         buttonClassName="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block"
-        showButton={false}
       />
-      <div className="mt-4 -mb-8">
-        <ContactSection />
-      </div>
     </section>
   );
 };

@@ -214,10 +214,10 @@ function HeroGeometric({
             </a>{" "}
             🚀
           </p>
-          <div className="flex justify-center mt-8 dark">
-            <div className="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block px-6 py-3 font-medium cursor-pointer transition-colors">
+          <div className="flex justify-center mt-8">
+            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block">
               Связаться в Телеграм
-            </div>
+            </Button>
           </div>
         </BlurFade>
       </div>

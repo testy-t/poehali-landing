@@ -5,6 +5,7 @@ import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { StarBorder } from "@/components/ui/star-border";
 
 // Simple BlurFade component since it's not available
 function BlurFade({
@@ -203,7 +204,7 @@ function HeroGeometric({
         </BlurFade>
 
         <BlurFade delay={0.6}>
-          <p className="md:text-xl lg:text-2xl mb-12 max-w-2xl mx-auto font-medium text-zinc-600 ">
+          <p className="md:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto font-medium text-zinc-600 ">
             вместе с партнёрской программой{" "}
             <a
               href="https://poehali.dev"
@@ -213,6 +214,17 @@ function HeroGeometric({
             </a>{" "}
             🚀
           </p>
+          <div className="flex justify-center mt-8 dark">
+            <StarBorder
+              as="a"
+              href="https://t.me/m/hEQRio2kNmFi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-105 transition-transform"
+            >
+              Написать в Telegram для обсуждения партнерства
+            </StarBorder>
+          </div>
         </BlurFade>
       </div>
     </div>

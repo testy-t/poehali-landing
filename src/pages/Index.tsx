@@ -14,8 +14,10 @@ const Index = () => {
       <ProgramConditions />
       <IncomeCalculator />
       <FAQ />
-      <div className="py-16 text-center">
-        <StarBorder>
+
+      {/* Star Border Button - moved higher */}
+      <div className="flex justify-center mb-16">
+        <StarBorder className="bg-black text-white border-white/20 hover:bg-gray-900">
           <span className="font-medium">Связаться в Телеграм</span>
         </StarBorder>
       </div>

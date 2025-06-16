@@ -5,7 +5,7 @@ import IncomeCalculator from "@/components/IncomeCalculator";
 import FAQ from "@/components/FAQ";
 import BottomNavigation from "@/components/BottomNavigation";
 import { StarBorder } from "@/components/ui/star-border";
-import { Icon } from "@/components/ui/icon";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (

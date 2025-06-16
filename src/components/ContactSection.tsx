@@ -15,7 +15,7 @@ const ContactSection = () => {
           href="https://t.me/your_telegram_bot"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block transition-transform hover:scale-105"
+          className="inline-block transition-transform hover:scale-105 dark"
           color="#0088cc"
           speed="8s"
         >

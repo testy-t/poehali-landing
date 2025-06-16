@@ -20,8 +20,9 @@ const HeroSection = () => {
         title2="вместе с poehali.dev"
         buttonText="Начать 👇🏼"
         buttonClassName="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block"
+        showButton={false}
       />
-      <div className="mt-8">
+      <div className="mt-4 -mb-8">
         <ContactSection />
       </div>
     </section>

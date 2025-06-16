@@ -16,12 +16,12 @@ const Index = () => {
       <IncomeCalculator />
       <FAQ />
 
-      {/* Star Border Button - moved higher */}
+      {/* CTA Button - same style as HeroSection */}
       <div className="text-center mb-40">
-        <StarBorder className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+        <button className="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block px-6 py-3 font-medium transition-colors duration-200 inline-flex items-center gap-2">
           <Icon name="Rocket" size={20} />
           Начать проект
-        </StarBorder>
+        </button>
       </div>
       <BottomNavigation />
     </div>

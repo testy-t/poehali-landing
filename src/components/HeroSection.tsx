@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
+import ContactSection from "@/components/ContactSection";
 
 const HeroSection = () => {
   return (
@@ -20,6 +21,9 @@ const HeroSection = () => {
         buttonText="Начать 👇🏼"
         buttonClassName="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block"
       />
+      <div className="mt-8">
+        <ContactSection />
+      </div>
     </section>
   );
 };

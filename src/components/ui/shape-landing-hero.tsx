@@ -215,15 +215,9 @@ function HeroGeometric({
             🚀
           </p>
           <div className="flex justify-center mt-8 dark">
-            <StarBorder
-              as="a"
-              href="https://t.me/m/hEQRio2kNmFi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform"
-            >
-              Написать в Telegram для обсуждения партнерства
-            </StarBorder>
+            <div className="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block px-6 py-3 font-medium cursor-pointer transition-colors">
+              Связаться в Телеграм
+            </div>
           </div>
         </BlurFade>
       </div>

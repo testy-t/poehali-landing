@@ -4,6 +4,7 @@ import ProgramConditions from "@/components/ProgramConditions";
 import IncomeCalculator from "@/components/IncomeCalculator";
 import FAQ from "@/components/FAQ";
 import BottomNavigation from "@/components/BottomNavigation";
+import { StarBorder } from "@/components/ui/star-border";
 
 const Index = () => {
   return (
@@ -13,6 +14,11 @@ const Index = () => {
       <ProgramConditions />
       <IncomeCalculator />
       <FAQ />
+      <div className="py-16 text-center">
+        <StarBorder>
+          <span className="font-medium">Связаться в Телеграм</span>
+        </StarBorder>
+      </div>
       <BottomNavigation />
     </div>
   );

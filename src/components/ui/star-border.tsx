@@ -56,7 +56,7 @@ export function StarBorder<T extends ElementType = "button">({
           "dark:from-background dark:to-muted dark:border-border",
         )}
       >
-        {children}
+        Связаться в Телеграм
       </div>
     </Component>
   );

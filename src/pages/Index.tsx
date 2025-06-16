@@ -3,7 +3,6 @@ import HowItWorks from "@/components/HowItWorks";
 import ProgramConditions from "@/components/ProgramConditions";
 import IncomeCalculator from "@/components/IncomeCalculator";
 import FAQ from "@/components/FAQ";
-import ContactSection from "@/components/ContactSection";
 import BottomNavigation from "@/components/BottomNavigation";
 
 const Index = () => {
@@ -14,7 +13,6 @@ const Index = () => {
       <ProgramConditions />
       <IncomeCalculator />
       <FAQ />
-      <ContactSection />
       <BottomNavigation />
     </div>
   );

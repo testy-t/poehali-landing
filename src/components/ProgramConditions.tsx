@@ -169,7 +169,7 @@ const ProgramConditions = () => {
                     className="mr-3 text-blue-500 mt-0.5 flex-shrink-0"
                   />
                   <span className="text-gray-600">
-                    Бонус 50% за первое пополнение
+                    +15% бонус за первое пополнение
                   </span>
                 </div>
               </div>

@@ -216,9 +216,15 @@ function HeroGeometric({
             🚀
           </p>
           <div className="flex justify-center mt-8">
-            <RainbowButton className="mx-auto">
-              Связаться в Телеграм
-            </RainbowButton>
+            <a
+              href="https://t.me/m/hEQRio2kNmFi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RainbowButton className="mx-auto">
+                Связаться в Телеграм
+              </RainbowButton>
+            </a>
           </div>
         </BlurFade>
       </div>

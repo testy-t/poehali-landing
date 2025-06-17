@@ -226,7 +226,10 @@ function HeroGeometric({
                   });
                 }
               }}
-              className="group flex flex-col items-center gap-2 p-4 hover:bg-white/5 rounded-lg transition-all duration-300 animate-bounce"
+              className="group flex flex-col items-center gap-2 p-4 hover:bg-white/5 rounded-lg transition-all duration-300"
+              style={{
+                animation: "bounce 5s ease-in-out infinite",
+              }}
             >
               <Icon
                 name="ChevronDown"

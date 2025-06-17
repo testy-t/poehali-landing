@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { StarBorder } from "@/components/ui/star-border";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 // Simple BlurFade component since it's not available
 function BlurFade({
@@ -215,9 +216,9 @@ function HeroGeometric({
             🚀
           </p>
           <div className="flex justify-center mt-8">
-            <Button className="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block">
+            <RainbowButton className="mx-auto">
               Связаться в Телеграм
-            </Button>
+            </RainbowButton>
           </div>
         </BlurFade>
       </div>

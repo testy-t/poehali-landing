@@ -10,7 +10,7 @@ const ContactSection = () => {
       <div className="max-w-4xl mx-auto text-center px-6 mb-10">
         <RainbowButton
           className="mx-auto flex items-center gap-2"
-          onClick={() => window.open("https://t.me/FermerCoders", "_blank")}
+          onClick={() => window.open("https://t.me/m/hEQRio2kNmFi", "_blank")}
         >
           <Icon name="Send" size={20} />
           Написать в Telegram

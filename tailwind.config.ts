@@ -19,6 +19,11 @@ export default {
     },
     extend: {
       colors: {
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
         "yellow-custom": "#fbb040",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -70,6 +75,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        rainbow: {
+          "0%": { "background-position": "0%" },
+          "100%": { "background-position": "200%" },
+        },
         "star-movement-bottom": {
           "0%": { transform: "translate(0%, 0%)", opacity: "1" },
           "100%": { transform: "translate(-100%, 0%)", opacity: "0" },
@@ -96,6 +105,7 @@ export default {
         },
       },
       animation: {
+        rainbow: "rainbow var(--speed, 2s) infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "star-movement-bottom":

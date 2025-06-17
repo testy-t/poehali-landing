@@ -205,16 +205,14 @@ const IncomeCalculator = () => {
                     Хотите зарабатывать {formatCurrency(totalMonthlyIncome)} в
                     месяц?
                   </p>
-                  <button
-                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                    onClick={() =>
-                      document
-                        .getElementById("final-cta")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
+                  <a
+                    href="https://t.me/m/hEQRio2kNmFi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors inline-block"
                   >
                     Стать партнером →
-                  </button>
+                  </a>
                 </div>
               </CardContent>
             </Card>

@@ -215,10 +215,7 @@ function HeroGeometric({
             </a>{" "}
             🚀
           </p>
-        </BlurFade>
-
-        <BlurFade delay={0.8}>
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center mt-8">
             <RainbowButton className="mx-auto">
               Связаться в Телеграм
             </RainbowButton>

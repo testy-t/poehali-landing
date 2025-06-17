@@ -17,6 +17,13 @@ const Index = () => {
       <IncomeCalculator />
       <FAQ />
 
+      {/* CTA Button - same style as HeroSection */}
+      <div className="text-center mb-40">
+        <RainbowButton className="mx-auto flex items-center gap-2">
+          <Icon name="Rocket" size={20} />
+          Начать проект
+        </RainbowButton>
+      </div>
       <BottomNavigation />
     </div>
   );

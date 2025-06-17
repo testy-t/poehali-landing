@@ -1,3 +1,4 @@
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import Icon from "@/components/ui/icon";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";

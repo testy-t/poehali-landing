@@ -19,7 +19,7 @@ const IncomeCalculator = () => {
   const totalYearlyIncome = totalMonthlyIncome * 12;
 
   // Бонус за первое пополнение B2B
-  const b2bFirstTimeBonus = b2bClients[0] * b2bAverageCheck * 0.5;
+  const b2bFirstTimeBonus = b2bClients[0] * b2bAverageCheck * 0.15;
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("ru-RU", {
@@ -100,7 +100,7 @@ const IncomeCalculator = () => {
                   <div className="space-y-1 text-sm text-blue-700">
                     <div>• B2C: 10% от пополнений (средний чек 2 500₽)</div>
                     <div>• B2B: 15% от пополнений (средний чек 100 000₽)</div>
-                    <div>• Бонус B2B: 50% от первого пополнения</div>
+                    <div>• Бонус B2B: 15% от первого пополнения</div>
                   </div>
                 </div>
               </CardContent>
@@ -155,7 +155,7 @@ const IncomeCalculator = () => {
                         </div>
                         <div className="text-sm text-blue-700">
                           {b2bClients[0]} × {formatCurrency(b2bAverageCheck)} ×
-                          50%
+                          15%
                         </div>
                       </div>
                       <div className="text-xl font-bold text-blue-600">

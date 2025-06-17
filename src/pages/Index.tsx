@@ -19,16 +19,7 @@ const Index = () => {
       <FAQ />
       <ContactSection />
 
-      {/* CTA Button - same style as HeroSection */}
-      <div className="text-center mb-40">
-        <RainbowButton
-          className="mx-auto flex items-center gap-2"
-          onClick={() => window.open("https://t.me/m/hEQRio2kNmFi", "_blank")}
-        >
-          <Icon name="Rocket" size={20} />
-          Начать проект
-        </RainbowButton>
-      </div>
+      {/* CTA Button removed */}
       <BottomNavigation />
     </div>
   );

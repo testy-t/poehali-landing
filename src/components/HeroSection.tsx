@@ -19,6 +19,9 @@ const HeroSection = () => {
         title2="вместе с poehali.dev"
         buttonText="Начать 👇🏼"
         buttonClassName="bg-yellow-400 text-black hover:bg-yellow-500 rounded-lg mx-auto block"
+        buttonAction={() =>
+          window.open("https://t.me/m/hEQRio2kNmFi", "_blank")
+        }
       />
     </section>
   );

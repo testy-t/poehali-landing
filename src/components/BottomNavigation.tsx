@@ -27,9 +27,9 @@ const BottomNavigation = () => {
     },
     {
       name: "Контакт",
-      url: "#contact",
+      url: "#contact-button",
       icon: Mail,
-      onClick: () => handleNavClick("#contact"),
+      onClick: () => handleNavClick("#contact-button"),
     },
   ];
 

@@ -216,6 +216,32 @@ function HeroGeometric({
             🚀
           </p>
           <div className="flex justify-center mt-8">
+            <button
+              onClick={() => {
+                const element = document.querySelector("#terms");
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+              className="group flex flex-col items-center gap-2 p-4 hover:bg-white/5 rounded-lg transition-all duration-300 animate-bounce"
+            >
+              <Icon
+                name="ChevronDown"
+                size={32}
+                className="text-zinc-400 group-hover:text-zinc-600 transition-colors"
+              />
+              <span className="text-sm text-zinc-500 group-hover:text-zinc-700 transition-colors">
+                Листай вниз
+              </span>
+            </button>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={0.8}>
+          <div className="flex justify-center mt-12">
             <RainbowButton className="mx-auto">
               Связаться в Телеграм
             </RainbowButton>

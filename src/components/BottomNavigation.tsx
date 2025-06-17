@@ -27,9 +27,9 @@ const BottomNavigation = () => {
     },
     {
       name: "Контакт",
-      url: "#contact",
+      url: "https://t.me/m/hEQRio2kNmFi",
       icon: Mail,
-      onClick: () => handleNavClick("#contact"),
+      onClick: () => window.open("https://t.me/m/hEQRio2kNmFi", "_blank"),
     },
   ];
 

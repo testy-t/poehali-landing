@@ -11,9 +11,7 @@ const HeroSection = () => {
         title1={
           <span>
             <span className="text-zinc-700">Получайте </span>
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              ещё больше
-            </span>
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">больше</span>
           </span>
         }
         title2="вместе с poehali.dev"

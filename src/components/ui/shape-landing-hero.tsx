@@ -190,10 +190,7 @@ function HeroGeometric({
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
-          >
-            <Circle className="w-1.5 md:w-2 h-1.5 md:h-2 mr-2 fill-current" />
-            Пассивный доход
-          </motion.div>
+          >Пассивный доход!</motion.div>
         </BlurFade>
 
         <BlurFade delay={0.4}>

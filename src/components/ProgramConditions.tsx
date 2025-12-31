@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import PaymentButton from "@/components/extensions/yookassa/PaymentButton";
 
 const ProgramConditions = () => {
   return (
@@ -100,6 +101,17 @@ const ProgramConditions = () => {
                   при 1000 клиентах × 2500₽
                 </div>
               </div>
+
+              {/* Кнопка оплаты */}
+              <PaymentButton
+                apiUrl="https://functions.poehali.dev/916b97fc-40d8-48b4-9a4f-e8e070052e35"
+                amount={2500}
+                userEmail="test@example.com"
+                returnUrl={window.location.origin + "/success"}
+                buttonText="Оплатить B2C тариф 2500 ₽"
+                className="w-full bg-white text-yellow-600 hover:bg-yellow-50 border-2 border-yellow-400 rounded-lg py-3 text-lg font-semibold"
+                onSuccess={(orderNumber) => console.log('Заказ создан:', orderNumber)}
+              />
             </CardContent>
           </Card>
 
@@ -182,6 +194,17 @@ const ProgramConditions = () => {
                   при 10 клиентах × 100 000₽
                 </div>
               </div>
+
+              {/* Кнопка оплаты */}
+              <PaymentButton
+                apiUrl="https://functions.poehali.dev/916b97fc-40d8-48b4-9a4f-e8e070052e35"
+                amount={100000}
+                userEmail="test@example.com"
+                returnUrl={window.location.origin + "/success"}
+                buttonText="Оплатить B2B тариф 100 000 ₽"
+                className="w-full bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-400 rounded-lg py-3 text-lg font-semibold"
+                onSuccess={(orderNumber) => console.log('Заказ создан:', orderNumber)}
+              />
             </CardContent>
           </Card>
         </div>

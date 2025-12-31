@@ -105,10 +105,10 @@ const ProgramConditions = () => {
               {/* Кнопка оплаты */}
               <PaymentButton
                 apiUrl="https://functions.poehali.dev/916b97fc-40d8-48b4-9a4f-e8e070052e35"
-                amount={2500}
+                amount={10}
                 userEmail="test@example.com"
                 returnUrl={window.location.origin + "/success"}
-                buttonText="Оплатить B2C тариф 2500 ₽"
+                buttonText="Тестовая оплата 10 ₽"
                 className="w-full bg-white text-yellow-600 hover:bg-yellow-50 border-2 border-yellow-400 rounded-lg py-3 text-lg font-semibold"
                 onSuccess={(orderNumber) => console.log('Заказ создан:', orderNumber)}
               />
@@ -198,10 +198,10 @@ const ProgramConditions = () => {
               {/* Кнопка оплаты */}
               <PaymentButton
                 apiUrl="https://functions.poehali.dev/916b97fc-40d8-48b4-9a4f-e8e070052e35"
-                amount={100000}
+                amount={10}
                 userEmail="test@example.com"
                 returnUrl={window.location.origin + "/success"}
-                buttonText="Оплатить B2B тариф 100 000 ₽"
+                buttonText="Тестовая оплата 10 ₽"
                 className="w-full bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-400 rounded-lg py-3 text-lg font-semibold"
                 onSuccess={(orderNumber) => console.log('Заказ создан:', orderNumber)}
               />
